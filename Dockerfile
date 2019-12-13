@@ -9,7 +9,7 @@ WORKDIR /qira-ci
 COPY requirements.txt /qira-ci/
 
 RUN apk update && \
-    apk add --virtual build-deps python3-dev gcc musl-dev && \
+    apk add --virtual build-deps python3-dev gcc musl-dev git && \
     apk add postgresql-dev
 RUN python3 -m pip install -r requirements.txt
 
